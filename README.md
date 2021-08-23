@@ -31,3 +31,7 @@ Timeout: Add timeout to the .get call: `cy.get('selector', {timeout: ms})`
 # Advantages of Cypress
 
 Because Cypress runs in the browser, it has easy access to css properties
+
+# Grouping with mocha
+
+To run only one test, add `.only` to the `it` or `describe` block
