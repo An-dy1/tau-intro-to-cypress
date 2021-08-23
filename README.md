@@ -27,3 +27,7 @@ cy.type('a thing{enter}')
 Delay: Add a `?delay-{selector}-{milliseconds}`
 
 Timeout: Add timeout to the .get call: `cy.get('selector', {timeout: ms})`
+
+# Advantages of Cypress
+
+Because Cypress runs in the browser, it has easy access to css properties

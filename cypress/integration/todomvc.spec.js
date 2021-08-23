@@ -7,6 +7,14 @@ it('should be able to add a new todo to the list', () => {
 
   cy.get('label').should('have.text', myToDo);
 
-  //   cy.get('.toggle').click();
-  //   cy.contains('Clear completed').click();
+  cy.get('toggle').should('not.be.checked');
+
+  cy.get('.toggle').click();
+
+  // assert that after checking off an item, it is struck through
+  cy.get('label').should('have.css', 'text-decoration-line', 'line-through');
+
+  cy.contains('Clear completed').click();
+
+  cy.get('.todo-list').should('not.have.descendants', 'li');
 });
